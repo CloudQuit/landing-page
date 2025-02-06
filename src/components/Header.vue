@@ -35,20 +35,20 @@ const toggleDropdown = () => {
 
 const navigation = [
     { name: 'Home', href: '/' },
-    { name: 'Features', href: '/#Features' },
-    { name: 'Pricing', href: '/#Pricing' },
-    { name: 'Contact', href: '/#Contact' },
-    { name: 'FAQs', href: '/#FAQs' },
+    { name: 'Features', href: '/#features' },
+    { name: 'Pricing', href: '/#pricing' },
+    { name: 'Contact', href: '/#contact' },
+    { name: 'FAQs', href: '/#faq' },
 ]</script>
 
 <template>
     <header class="top-0 z-50 border-b dark:border-slate-500 dark:bg-neutral-900">
         <nav class="mx-auto flex md:w-full lg:max-w-7xl items-center justify-between" aria-label="Global">
             <div class="flex lg:flex-1 justify-between">
-                <router-link to="/" class="m-1.5 p-1.5 flex items-center gap-2">
+                <a href="/" class="m-1.5 p-1.5 flex items-center gap-2">
                     <Link class="bg-primary rounded-lg w-12 h-12 p-2 text-gray-100" />
                     <span class="text-2xl font-semibold dark:text-gray-100 ml-2">{{ proxy.app_name }}</span>
-                </router-link>
+                </a>
             </div>
             <div class="hidden lg:flex lg:gap-x-12 mr-10">
                 <a
@@ -79,10 +79,10 @@ const navigation = [
             <div class="fixed inset-0 z-50" />
             <DialogPanel class="fixed inset-y-0 right-0 z-50 w-full overflow-y-auto bg-white dark:bg-gray-900 px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10">
                 <div class="flex items-center justify-between">
-                    <router-link to="/" class="-m-1.5 p-1.5 flex items-center justify-between">
+                    <a href="/" class="-m-1.5 p-1.5 flex items-center justify-between">
                         <Link class="bg-primary rounded-lg w-12 h-12 p-2 text-gray-100" />
                         <span class="ml-2 font-bold text-xl">{{ proxy.app_name  }}</span>
-                    </router-link>
+                    </a>
                     <div class="flex items-center gap-4">
                         <button
                             type="button"

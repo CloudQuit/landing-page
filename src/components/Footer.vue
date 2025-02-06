@@ -1,17 +1,17 @@
 <template>
-    <footer class="border-t mt-10 border-gray-200 dark:border-gray-700">
+    <footer class="border-t mt-10 border-gray-200 dark:border-gray-700" id="contact">
         <div class="mx-auto max-w-7xl px-4 sm:px-6 py-8 sm:py-12 md:py-16">
             <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-4 gap-8">
                 <!-- Brand Section -->
                 <div class="col-span-1 sm:col-span-2 xl:col-span-2">
-                    <router-link to="/" class="flex items-center group">
+                    <a href="/" class="flex items-center group">
                         <Link class="bg-emerald-500 rounded-xl w-10 sm:w-12 h-10 sm:h-12 p-2 mr-3 text-white transition-transform group-hover:scale-110"/>
                         <h3 class="text-xl sm:text-2xl font-bold bg-gradient-to-r from-emerald-500 to-teal-500 bg-clip-text text-transparent">
                             {{ proxy.app_name }}
                         </h3>
-                    </router-link>
+                    </a>
                     <p class="mt-4 text-sm sm:text-base text-gray-600 dark:text-gray-400 max-w-sm">
-                        Transform your long URLs into short, memorable links that make sharing easier than ever.
+                        {{ proxy.app_hero_description }}
                     </p>
                 </div>
 
@@ -49,13 +49,13 @@
                             <Mail class="w-4 h-4 sm:w-5 sm:h-5 mr-2" />
                             Contact Us
                         </a>
-                        <router-link 
-                            to="/#faq" 
+                        <a
+                            href="/#faq" 
                             class="text-sm sm:text-base text-gray-600 dark:text-gray-400 hover:text-emerald-500 dark:hover:text-emerald-400 transition-colors flex items-center"
                         >
                             <HelpCircle class="w-4 h-4 sm:w-5 sm:h-5 mr-2" />
                             FAQ
-                        </router-link>
+                        </a>
                     </div>
                 </div>
             </div>
@@ -83,5 +83,5 @@
 import { Link, Linkedin, Twitter, Mail, HelpCircle } from "lucide-vue-next"
 import { ref, getCurrentInstance } from 'vue'
 
-const {proxy} = getCurrentInstance()
+const { proxy } = getCurrentInstance()
 </script>

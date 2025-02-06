@@ -22,4 +22,4 @@ node_modules
 *.sw?
 .env
 package-lock.json
-dist
+src/config.yaml
